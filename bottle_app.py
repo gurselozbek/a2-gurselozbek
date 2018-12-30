@@ -420,7 +420,7 @@ def formhandler():
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     dic = {"comment":comment,"time":st} 
     if hash_pw == password:
-    	comments.insert(0,dic)
+    	comments = [dic] + comments
     return html_index()
 
 
